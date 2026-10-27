@@ -36,32 +36,3 @@ Week6-PAW/
 └── README.md
 ```
 
-### 3. File latihan Fetch API terpisah
-- File `latihan/fetch.js` berisi contoh Fetch API mandiri untuk latihan dan menampilkan hasil di Console browser.
-- File `latihan/test.js` menguji respons API, struktur JSON, keberadaan daftar produk, serta nama dan harga produk. Hasilnya ditampilkan di Console browser.
-- Kedua file latihan tidak dipanggil oleh halaman utama agar permintaan API tidak berjalan dua kali.
-- Fitur utama website tetap berada di `js/script.js` dan menampilkan produk langsung pada halaman.
-
-## Cara Menjalankan
-
-1. Buka folder project di Visual Studio Code.
-2. Jalankan `index.html` menggunakan Live Server.
-3. Pastikan koneksi internet aktif agar data dari DummyJSON dapat dimuat.
-4. Coba tombol **Muat Ulang** dan isi form pembuat caption.
-5. Untuk mencoba `latihan/fetch.js` atau `latihan/test.js`, buka DevTools browser (biasanya tekan F12) dan jalankan isi file yang diinginkan di Console, atau buat halaman latihan terpisah yang memuat file tersebut. Hasil latihan/pengujian akan terlihat di Console. File latihan tidak perlu ditambahkan ke `index.html` utama.
-
-## Pengujian
-
-- [ ] Produk berhasil muncul dengan nama dan harga.
-- [ ] `latihan/test.js` menyatakan pengujian API dan data produk lulus di Console.
-- [ ] Pesan loading muncul saat data sedang dimuat.
-- [ ] Pesan error muncul jika API tidak dapat diakses.
-- [ ] Tombol **Muat Ulang** dapat mengambil data kembali.
-- [ ] Form menolak nama produk kurang dari 3 karakter.
-- [ ] Form menolak harga kosong atau kurang dari/sama dengan 0.
-- [ ] Caption muncul jika input valid dan berubah sesuai gaya yang dipilih.
-- [ ] Tampilan diperiksa pada desktop dan mobile.
-
-## Pengumpulan
-
-Buat repository GitHub baru dengan format nama sesuai ketentuan dosen, yaitu `Week6-Kelas[X]-[NIMLengkap]`. Sesuaikan `[X]` dan `[NIMLengkap]` dengan data sendiri, lalu push seluruh isi folder project ke repository tersebut. Setelah itu, kumpulkan tautan repository Week 6 melalui Moodle.
