@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 6 - Etalase Produk</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <p class="eyebrow">PRAKTIKUM PAW · WEEK 6</p>
+      <h1>Etalase Produk</h1>
+      <p class="subtitle">Menampilkan produk dari API dan membuat caption sederhana.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BAGIAN 1</p>
+          <h2>Daftar Produk</h2>
+        </div>
+        <button id="refreshButton" class="button button-secondary" type="button">Muat Ulang</button>
+      </div>
+      <p id="loadingMessage" class="message">Memuat data produk...</p>
+      <p id="errorMessage" class="message error" hidden></p>
+      <div id="productList" class="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="panel">
+      <p class="eyebrow">BAGIAN 2</p>
+      <h2>Form Pembuat Caption</h2>
+      <p class="section-description">Masukkan informasi produk untuk membuat caption promosi sederhana.</p>
+
+      <form id="captionForm" novalidate>
+        <div class="form-group">
+          <label for="productName">Nama produk</label>
+          <input id="productName" name="productName" type="text" maxlength="80" autocomplete="off" aria-describedby="nameError" placeholder="Contoh: Kopi Susu Aren">
+          <small id="nameError" class="field-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="productPrice">Harga produk (Rp)</label>
+          <input id="productPrice" name="productPrice" type="number" min="1" step="1" aria-describedby="priceError" placeholder="Contoh: 18000">
+          <small id="priceError" class="field-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="captionStyle">Gaya caption</label>
+          <select id="captionStyle" name="captionStyle">
+            <option value="santai">Santai</option>
+            <option value="promo">Promo</option>
+            <option value="formal">Formal</option>
+          </select>
+        </div>
+
+        <button class="button" type="submit">Buat Caption</button>
+      </form>
+
+      <div id="captionResult" class="result" aria-live="polite" hidden>
+        <h3>Hasil Caption</h3>
+        <p id="captionText"></p>
+      </div>
+      <p id="formStatus" class="message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Project latihan HTML, CSS, JavaScript DOM, Event Handling, dan Fetch API.</div>
+  </footer>
+</body>
+</html>
